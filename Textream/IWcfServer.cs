@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using WcfInterface;
 
 namespace Textream
@@ -15,7 +10,7 @@ namespace Textream
         /// </summary>
         public void MakeTextStream(string str)
         {
-            MainWindow mainWindow = Application.Current.MainWindow as MainWindow; // メインウィンドウを取得
+            var mainWindow = Application.Current.MainWindow as MainWindow; // メインウィンドウを取得
             mainWindow.MakeTextStream(str);
         }
 

@@ -1,20 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.ServiceModel;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Effects;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Windows.Threading;
 using WcfInterface;
 
@@ -36,14 +26,12 @@ namespace Textream
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            TaskTrayIcon.Icon = Properties.Resources.Icon; // タスクトレイのアイコンを設定
+
             serviceHost = new ServiceHost(typeof(IWcfServer), new Uri(baseAddress));
-            //serviceHost.AddServiceEndpoint(typeof(IWcfInterface), new NetNamedPipeBinding(NetNamedPipeSecurityMode.None), endPointAddress);
             serviceHost.AddServiceEndpoint(typeof(IWcfInterface), new NetTcpBinding(), endPointAddress);
             serviceHost.Open(); // WCFサービスの開始
 
-            // MakeTextStream("test");
-            TaskTrayIcon.Icon = Properties.Resources.Icon; // タスクトレイのアイコン設定
-            
             var settingWindow = new SettingWindow();
             settingWindow.ShowDialog(); // 設定画面を開く
         }
