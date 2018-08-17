@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Textream", "Textream\Textream.csproj", "{B1AFC963-4DB7-4DA4-A086-9621EAF9A6F4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfInterface", "WcfInterface\WcfInterface.csproj", "{1A669A42-9D20-405E-A6A2-1D465BF33A13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EzCommenter", "EzCommenter\EzCommenter.csproj", "{6E240BDB-6D6C-477F-AA71-832BE4EA6F54}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{B1AFC963-4DB7-4DA4-A086-9621EAF9A6F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1AFC963-4DB7-4DA4-A086-9621EAF9A6F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1AFC963-4DB7-4DA4-A086-9621EAF9A6F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A669A42-9D20-405E-A6A2-1D465BF33A13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A669A42-9D20-405E-A6A2-1D465BF33A13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A669A42-9D20-405E-A6A2-1D465BF33A13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A669A42-9D20-405E-A6A2-1D465BF33A13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E240BDB-6D6C-477F-AA71-832BE4EA6F54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E240BDB-6D6C-477F-AA71-832BE4EA6F54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E240BDB-6D6C-477F-AA71-832BE4EA6F54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E240BDB-6D6C-477F-AA71-832BE4EA6F54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

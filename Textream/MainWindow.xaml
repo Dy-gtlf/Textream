@@ -3,10 +3,26 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:tb="http://www.hardcodet.net/taskbar"
         xmlns:local="clr-namespace:Textream"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Textream"
+        AllowsTransparency="True"
+        Background="Transparent"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Topmost="True"
+        WindowState="Maximized"
+        Height="1080" Width="1920"
+        Loaded="Window_Loaded" Closed="Window_Closed">
+    <Canvas Name="Root">
+        <tb:TaskbarIcon Name="TaskTrayIcon" ToolTipText="Textream">
+            <tb:TaskbarIcon.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="設定画面を開く" Click="OpenSettingWindow"/>
+                    <MenuItem Header="終了" Click="Quit"/>
+                </ContextMenu>
+            </tb:TaskbarIcon.ContextMenu>
+        </tb:TaskbarIcon>
+    </Canvas>
 </Window>
