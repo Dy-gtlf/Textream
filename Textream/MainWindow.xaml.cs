@@ -18,7 +18,6 @@ namespace Textream
     {
         private WebServiceHost webServiceHost;
         private const string webBaseAddress = @"http://localhost/Textream";
-        private const string webEndPointAddress = "http";
 
         public MainWindow()
         {

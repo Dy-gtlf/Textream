@@ -9,25 +9,11 @@
 </head>
 <body>
     <h1>EzCommenter</h1>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" defaultbutton="TransmissionButton">
         <div>
-            <asp:TextBox ID="Comment" runat="server" onKeyPress="PressEnterKey(TransmissionButton)"></asp:TextBox>
+            <asp:TextBox ID="Comment" runat="server"></asp:TextBox>
             <asp:Button ID="TransmissionButton" runat="server" Text="送信" OnClick="TransmissionButton_Click"/>
         </div>
     </form>
-    <script type="text/javascript">
-        function PressEnterKey(ControlName) {
-            var key;
-            if (window.event)
-                key = window.event.keyCode;
-            if (key == 13) {
-                var btn = document.getElementById(ControlName);
-                if (ControlName != null) {
-                    ControlName.click();
-                    event.keyCode = 0
-                }
-            }
-        }
-    </script>
 </body>
 </html>
