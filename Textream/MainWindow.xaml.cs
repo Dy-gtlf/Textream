@@ -1,12 +1,13 @@
 ﻿using System;
 using System.ServiceModel;
+using System.ServiceModel.Web;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Effects;
 using System.Windows.Threading;
-using WcfInterface;
+using WcfWebInterface;
 
 namespace Textream
 {
@@ -15,9 +16,9 @@ namespace Textream
     /// </summary>
     public partial class MainWindow : Window
     {
-        private ServiceHost serviceHost;
-        private string baseAddress = @"net.tcp://localhost/Textream";
-        private string endPointAddress = "tcp";
+        private WebServiceHost webServiceHost;
+        private const string webBaseAddress = @"http://localhost/Textream";
+        private const string webEndPointAddress = "http";
 
         public MainWindow()
         {
@@ -28,9 +29,9 @@ namespace Textream
         {
             TaskTrayIcon.Icon = Properties.Resources.Icon; // タスクトレイのアイコンを設定
 
-            serviceHost = new ServiceHost(typeof(IWcfServer), new Uri(baseAddress));
-            serviceHost.AddServiceEndpoint(typeof(IWcfInterface), new NetTcpBinding(), endPointAddress);
-            serviceHost.Open(); // WCFサービスの開始
+            webServiceHost = new WebServiceHost(typeof(IWcfWebServer), new Uri(webBaseAddress));
+            webServiceHost.AddServiceEndpoint(typeof(IWcfWebInterface), new WebHttpBinding(), "");
+            webServiceHost.Open(); // WCFサービスの開始
 
             var settingWindow = new SettingWindow();
             settingWindow.ShowDialog(); // 設定画面を開く
@@ -93,7 +94,7 @@ namespace Textream
 
         private void Window_Closed(object sender, EventArgs e)
         {
-            serviceHost.Close(); // WCFサービスの終了
+            webServiceHost.Close(); // WCFサービスの終了
         }
 
         private void OpenSettingWindow(object sender, EventArgs e)

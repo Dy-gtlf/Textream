@@ -1,11 +1,13 @@
 ﻿using System.ServiceModel;
+using System.ServiceModel.Web;
 
-namespace WcfInterface
+namespace WcfWebInterface
 {
     [ServiceContract]
-    public interface IWcfInterface
+    public interface IWcfWebInterface
     {
         [OperationContract]
+        [WebInvoke]
         void MakeTextStream(string str);
     }
 }

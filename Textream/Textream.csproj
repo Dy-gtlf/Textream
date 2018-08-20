@@ -44,6 +44,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -62,7 +63,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="IWcfServer.cs" />
+    <Compile Include="IWcfWebServer.cs" />
     <Compile Include="SettingWindow.xaml.cs">
       <DependentUpon>SettingWindow.xaml</DependentUpon>
     </Compile>
@@ -111,9 +112,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WcfInterface\WcfInterface.csproj">
-      <Project>{1a669a42-9d20-405e-a6a2-1d465bf33a13}</Project>
-      <Name>WcfInterface</Name>
+    <ProjectReference Include="..\WcfWebInterface\WcfWebInterface.csproj">
+      <Project>{2A0228B4-B2CE-4B75-9D7E-9BAB8EB517CB}</Project>
+      <Name>WcfWebInterface</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
