@@ -7,7 +7,7 @@ namespace WcfWebInterface
     public interface IWcfWebInterface
     {
         [OperationContract]
-        [WebInvoke]
+        [WebGet]
         void MakeTextStream(string str);
     }
 }
